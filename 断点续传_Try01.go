@@ -32,12 +32,12 @@ package main
 //	file02.Seek(CompleteInt, io.SeekStart)
 //	data := make([]byte, 1024)
 //	for {
-//		//if CompleteInt >= 270000 {
-//		//	panic("突然中断")
-//		//}
+//		if CompleteInt >= 270000 {
+//			panic("突然中断")
+//		}
 //		n, err := file01.Read(data)
 //		if err == io.EOF || n == 0 {
-//			fmt.Println("复制结束,现累积复制了", CompleteInt, "字节内容")
+//			fmt.Println("复制结束,现累积复制了", CompleteInt, "B字节内容")
 //			file03.Close()
 //			os.Remove(TarDir + Dest + "Temp.txt")
 //			break
