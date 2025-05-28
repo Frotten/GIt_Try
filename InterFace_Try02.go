@@ -54,22 +54,22 @@ func Show(c Characteristic) {
 	fmt.Println(c.Position())
 }
 func main() {
-	大黄 := Dog{
+	Dog1 := Dog{
 		Animal: Animal{
 			Name: "大黄",
 			Age:  114514,
 		},
 		Species: "邪魅的笑",
 	}
-	耄耋 := Cat{
+	Cat1 := Cat{
 		Animal: Animal{
 			Name: "耄耋",
 			Age:  17,
 		},
 		IQ: 1,
 	}
-	fmt.Println(大黄.Food(), "And", 耄耋.Food())
-	fmt.Println("才艺欣赏：", 大黄.Species, "And", 耄耋.Habit())
-	Show(大黄)
-	Show(耄耋)
+	fmt.Println(Dog1.Food(), "And", Cat1.Food())
+	fmt.Println("才艺欣赏：", Dog1.Species, "And", Cat1.Habit())
+	Show(Dog1)
+	Show(Cat1)
 }
