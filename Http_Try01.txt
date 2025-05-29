@@ -1,0 +1,6 @@
+<h1 style = 'color : orange'>网络编程，敬请见证</h1>
+<h2>真是让人嗨到不行啊!!</h2>
+<p>这是一个简单的HTML页面，展示了网络编程的基本结构。</p>
+<p>在这个页面中，我使用了HTML的基本标签来构建内容。</p>
+<button id = 'b1' onclick = 'alert("按钮被点击了！")'>点击我</button>
+<img src="https://t11.baidu.com/it/u=3031461994,196583253&fm=30&app=106&f=JPEG?w=640&h=399&s=E60AF60F02A046BECC40A56F0300A070" alt="示例图片">
