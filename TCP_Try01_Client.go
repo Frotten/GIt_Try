@@ -14,8 +14,8 @@ func main() {
 		panic(err)
 	}
 	defer conn.Close()
-	inputReader := bufio.NewReader(os.Stdin)
 	for {
+		inputReader := bufio.NewReader(os.Stdin)
 		input, _ := inputReader.ReadString('\n')
 		input = strings.TrimSpace(input)
 		if strings.ToUpper(input) == "EXIT" {
