@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func randInt() chan int {
+func randIntTry03() chan int {
 	ch := make(chan int)
 	go func() {
 		for {
@@ -18,7 +18,7 @@ func randInt() chan int {
 
 func main() {
 	rand.New(rand.NewSource(time.Now().UnixNano()))
-	ch1 := randInt()
+	ch1 := randIntTry03()
 	fmt.Println("随机数01:", <-ch1)
 	fmt.Println("随机数02:", <-ch1)
 }
