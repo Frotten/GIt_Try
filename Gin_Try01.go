@@ -28,5 +28,5 @@ func main() {
 			"Delete": "This is a DELETE request",
 		})
 	})
-	r.Run(":9090") //启动服务，默认端口是8080
+	r.Run("192.168.56.1:9090") //启动服务，默认端口是8080
 }
