@@ -23,7 +23,7 @@ func randIntB() chan int {
 	}()
 	return ch
 }
-func randInt(done chan bool) chan int {
+func randIntTry04(done chan bool) chan int {
 	ch := make(chan int, 10)
 	go func() {
 	Label:
@@ -41,7 +41,7 @@ func randInt(done chan bool) chan int {
 }
 func main() {
 	done := make(chan bool)
-	ch := randInt(done)
+	ch := randIntTry04(done)
 	fmt.Println("RandIntA：", <-ch)
 	fmt.Println("RandIntB：", <-ch)
 	close(done)
