@@ -21,15 +21,15 @@ func ChanFunc01(wg *sync.WaitGroup, ch1 chan int) {
 	defer wg.Done()
 	for value := range ch1 {
 		fmt.Println("1-----", value)
+		time.Sleep(100 * time.Millisecond)
 	}
-	time.Sleep(100 * time.Millisecond)
 }
 func ChanFunc02(wg *sync.WaitGroup, ch2 chan int) {
 	defer wg.Done()
 	for value := range ch2 {
 		fmt.Println("2-----", value)
+		time.Sleep(1000 * time.Millisecond)
 	}
-	time.Sleep(1000 * time.Millisecond)
 }
 func main() {
 	A := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
