@@ -35,8 +35,8 @@ func main() {
 	A := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	var wg sync.WaitGroup
 	wg.Add(3)
-	ch1 := make(chan int)
-	ch2 := make(chan int)
+	ch1 := make(chan int, 10)
+	ch2 := make(chan int, 10)
 	go GoroutineTry06Func01(A, &wg, ch1, ch2)
 	go ChanFunc01(&wg, ch1)
 	go ChanFunc02(&wg, ch2)
