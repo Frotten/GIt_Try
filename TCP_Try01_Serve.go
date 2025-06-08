@@ -6,7 +6,7 @@ import (
 	"net"
 )
 
-func process(conn net.Conn) {
+func process01(conn net.Conn) {
 	defer conn.Close()
 	for {
 		reader := bufio.NewReader(conn)
@@ -34,6 +34,6 @@ func main() { //TCP服务器端尝试
 			fmt.Println("Accept Fielded", err)
 			continue
 		}
-		go process(conn)
+		go process01(conn)
 	}
 }
