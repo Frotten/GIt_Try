@@ -16,7 +16,7 @@ func main() {
 	defer conn.Close()
 	for {
 		Reader := bufio.NewReader(os.Stdin)
-		TempString, err := Reader.ReadString('\n')
+		TempString, err := Reader.ReadString('\n') //如果没有ReadString作为限制则会出现黏包问题
 		if err != nil {
 			panic(err)
 		}
