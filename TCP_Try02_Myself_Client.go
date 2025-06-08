@@ -29,7 +29,7 @@ func main() {
 			panic(err)
 		}
 		response := make([]byte, 1024)
-		n, err := conn.Read(response)
+		n, err := conn.Read(response) //这里需要从服务端口来读取数据，以确保数据通信成功
 		if err != nil {
 			fmt.Println("Read Error", err)
 			break
