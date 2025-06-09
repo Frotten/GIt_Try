@@ -42,7 +42,7 @@ func main() {
 		}
 		response := make([]byte, 1024)
 		n, err := listen.Read(response)
-		if err != nil {
+		if err != nil || n == 0 {
 			fmt.Println("无应答")
 			return
 		}
